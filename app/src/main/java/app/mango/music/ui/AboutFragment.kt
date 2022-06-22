@@ -1,18 +1,17 @@
-package app.mango.music.ui.style
+package app.mango.music.ui
 
 import android.annotation.SuppressLint
 import android.graphics.Paint
 import android.os.Bundle
 import android.view.View
 import app.mango.music.R
-import app.mango.music.databinding.FragmentStyleBinding
-import app.mango.music.ui.BaseFragment
+import app.mango.music.databinding.FragmentAboutBinding
 import app.mango.music.utils.DimensionExtensions.dpToPx
 import app.mango.music.utils.themeColor
 import com.google.android.material.shape.*
 import com.google.android.material.transition.MaterialFade
 
-class StyleFragment:BaseFragment<FragmentStyleBinding>() {
+class AboutFragment:BaseFragment<FragmentAboutBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,5 +71,5 @@ class StyleFragment:BaseFragment<FragmentStyleBinding>() {
 
     }
 
-    override fun setBinding(): FragmentStyleBinding = FragmentStyleBinding.inflate(layoutInflater)
+    override fun setBinding(): FragmentAboutBinding = FragmentAboutBinding.inflate(layoutInflater)
 }

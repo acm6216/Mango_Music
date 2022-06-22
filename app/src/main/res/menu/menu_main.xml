@@ -26,14 +26,9 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/to_style"
+            android:id="@+id/to_about"
             android:checked="true"
-            android:icon="@drawable/ic_style"
-            android:title="@string/navigation_style" />
-        <!--<item
-            android:id="@+id/to_sync"
-            android:checked="true"
-            android:icon="@drawable/ic_sync"
-            android:title="@string/navigation_sync" />-->
+            android:icon="@drawable/ic_account"
+            android:title="@string/navigation_about" />
     </group>
 </menu>

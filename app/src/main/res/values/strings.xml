@@ -8,7 +8,7 @@
     <string name="navigation_favorite">收藏</string>
     <string name="navigation_album">专辑</string>
     <string name="navigation_artist">艺术家</string>
-    <string name="navigation_style">风格</string>
+    <string name="navigation_about">关于</string>
     <string name="navigation_sync">扫描</string>
 
     <string name="menu_item_delete">删除</string>

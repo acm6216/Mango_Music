@@ -137,7 +137,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Toolbar.OnMenuItemClic
         addNavigationListener { id, titleId, _ ->
             binding.bottomAppBarTitle.setText(titleId)
             when (id) {
-                R.id.to_style -> navigateToStyle()
+                R.id.to_about -> navigateToStyle()
                 else -> navigateToHome(
                     titleId, when (id) {
                         R.id.to_album -> MusicBox.ALBUM
@@ -203,7 +203,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Toolbar.OnMenuItemClic
                 duration = resources.getInteger(R.integer.motion_duration_large).toLong()
             }
         }
-        navController.navigate(R.id.style_fragment)
+        navController.navigate(R.id.about_fragment)
     }
 
     private fun navigateToPlaying() {
