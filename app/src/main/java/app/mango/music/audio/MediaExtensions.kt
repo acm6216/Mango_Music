@@ -115,15 +115,6 @@ fun Bundle.setDateAdded(date:String):Bundle{
     return this
 }
 
-fun Bundle.setLyricData(lyric: String): Bundle {
-    putString("MediaStore.Audio.Media.LYRIC", lyric)
-    return this
-}
-
-fun MediaMetadata.getLyricData(): String {
-    return this.extras?.getString("MediaStore.Audio.Media.LYRIC")?:""
-}
-
 fun MediaMetadata.getDuration(): Long {
     return this.extras?.getLong(MediaStore.Audio.Media.DURATION) ?: 0L
 }
