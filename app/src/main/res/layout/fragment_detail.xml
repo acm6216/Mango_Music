@@ -1,0 +1,142 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detail"
+            type="app.mango.music.audio.Detail" />
+
+        <variable
+            name="musicBox"
+            type="app.mango.music.audio.MusicBox" />
+
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="@string/music_card_detail_transition_name"
+        app:marginTopSystemWindowInsets="@{true}"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/menu_item_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_1"
+                android:layout_marginEnd="@dimen/grid_1"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                app:layout_constraintEnd_toStartOf="@+id/navigation_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title_detail="@{detail.mediaItem}"
+                app:title_type="@{musicBox}"
+                tools:text="High school reunion" />
+
+            <ImageButton
+                android:id="@+id/navigation_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/grid_2"
+                android:background="?attr/actionBarItemBackground"
+                android:padding="@dimen/grid_2"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_up"
+                app:layout_constraintEnd_toEndOf="@+id/sender_profile_image_view"
+                app:layout_constraintStart_toStartOf="@+id/sender_profile_image_view"
+                app:layout_constraintTop_toTopOf="@+id/title_text_view"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/subtitle_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_1"
+                android:layout_marginEnd="@dimen/grid_1"
+                android:textAppearance="?attr/textAppearanceCaption"
+                app:info_detail="@{detail}"
+                app:info_type="@{musicBox}"
+                app:layout_constraintEnd_toStartOf="@+id/sender_profile_image_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+                tools:text="Ali Connors -- 12m" />
+
+            <TextView
+                android:id="@+id/recipient_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_0_25"
+                android:layout_marginEnd="@dimen/grid_1"
+                android:textAppearance="?attr/textAppearanceCaption"
+                app:layout_constraintEnd_toStartOf="@+id/sender_profile_image_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle_text_view"
+                app:music_duration="@{detail}"
+                tools:text="duration" />
+
+            <ImageView
+                android:id="@+id/sender_profile_image_view"
+                android:layout_width="@dimen/music_profile_image_size"
+                android:layout_height="@dimen/music_profile_image_size"
+                android:layout_marginEnd="@dimen/grid_2"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/recipient_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/subtitle_text_view"
+                app:loadCover="@{detail.mediaItem}"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/body_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_3"
+                android:text="@{@string/detail_music_count(detail.count)}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sender_profile_image_view"
+                tools:text="@string/detail_music_count" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/material_on_surface_stroke"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/body_text_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/attachment_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="?attr/scrimBackground"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="80dp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="app.mango.music.adapters.MusicAdapter" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.lessons.LessonsSheetFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lessons_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_peekHeight="1dp"
+            app:behavior_hideable="true"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <androidx.cardview.widget.CardView
+                android:translationZ="@dimen/bottom_app_bar_logo_size"
+                app:cardCornerRadius="@dimen/fab_margin"
+                app:marginTopSystemWindowInsets="@{true}"
+                android:layout_marginBottom="-16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/playlist_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:minHeight="?attr/actionBarSize"
+                        android:paddingHorizontal="@dimen/grid_2"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        app:layout_constraintEnd_toStartOf="@id/collapse_playlist"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/collapse_playlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="@dimen/grid_2"
+                        android:rotation="180"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/playlist_title"
+                        app:layout_constraintTop_toTopOf="@id/playlist_title"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="?attr/colorControlNormal" />
+
+                    <View
+                        android:id="@+id/playlist_title_divider"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:backgroundTint="@color/material_on_surface_stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/playlist_title" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/playlist"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:adapter="@{adapter}"
+                        android:background="?scrimBackground"
+                        android:clipToPadding="false"
+                        app:hasFixedSize="@{true}"
+                        android:overScrollMode="never"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/playlist_title_divider"
+                        android:paddingBottom="@dimen/fab_margin" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

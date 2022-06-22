@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedAttribute">
+
+    <data>
+        <variable
+            name="favoriteMusic"
+            type="app.mango.music.audio.FavoriteMusic" />
+        <variable
+            name="listener"
+            type="app.mango.music.adapters.MusicAdapter.ItemListener" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/email_frame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/grid_0_25"
+        android:layout_marginHorizontal="@dimen/grid_0_5"
+        android:background="?attr/colorAccent">
+
+        <com.google.android.material.card.MaterialCardView
+            app:cardCornerRadius="0dp"
+            app:strokeWidth="0dp"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/plane_00"
+            android:clickable="true"
+            android:focusable="true"
+            android:transitionName="@{@string/music_card_transition_name(favoriteMusic.mediaItem().mediaId)}"
+            app:cardPreventCornerOverlap="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/grid_2"
+                android:paddingBottom="@dimen/grid_2">
+
+                <TextView
+                    android:ellipsize="end"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:id="@+id/subtitle_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    android:maxLines="1"
+                    app:music_info="@{favoriteMusic.mediaItem}"
+                    tools:text="Google Express - 12m"
+                    app:layout_constraintEnd_toStartOf="@+id/sender_profile_image_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_text_view"/>
+
+                <TextView
+                    android:ellipsize="end"
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_goneMarginEnd="@dimen/grid_2"
+                    android:maxLines="1"
+                    android:text="@{favoriteMusic.metadata().title}"
+                    tools:text="Package Shipped!"
+                    app:layout_constraintEnd_toStartOf="@+id/sender_profile_image_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_goneMarginEnd="@dimen/grid_2"
+                    app:layout_constraintTop_toBottomOf="@id/subtitle_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sender_profile_image_view"
+                    android:layout_marginTop="@dimen/grid_0_5"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    android:layout_marginStart="@dimen/grid_2"
+                    app:music_type="@{favoriteMusic.mediaItem}"
+                    android:layout_width="0dp"
+                    tools:text="mimeType"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    app:loadMusicCover="@{favoriteMusic.mediaItem}"
+                    android:id="@+id/sender_profile_image_view"
+                    android:layout_width="@dimen/music_profile_image_size"
+                    android:layout_height="@dimen/music_profile_image_size"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</layout>

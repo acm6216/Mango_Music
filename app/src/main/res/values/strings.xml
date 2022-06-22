@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name" translatable="false">Mango Music</string>
+    <string name="lrc_label">暂无歌词</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="navigation_music">音乐库</string>
+    <string name="navigation_favorite">收藏</string>
+    <string name="navigation_album">专辑</string>
+    <string name="navigation_artist">艺术家</string>
+    <string name="navigation_style">风格</string>
+    <string name="navigation_sync">扫描</string>
+
+    <string name="menu_item_delete">删除</string>
+    <string name="menu_item_favorite">收藏</string>
+    <string name="menu_item_search">搜索</string>
+    <string name="menu_item_filters">过滤</string>
+    <string name="menu_item_grid_view">网格大小</string>
+    <string name="menu_item_settings">设置</string>
+
+    <string name="search_suggestion_hint">歌手、专辑、歌曲名</string>
+
+    <!-- request -->
+    <string name="show_delete_dialog">确定要删除 %1$s ?\n\n注意，此操作无法撤销！</string>
+    <string name="show_delete_dialog_pos">确定删除</string>
+    <string name="music_add_next">下一首播放</string>
+    <string name="music_share_file">分享文件</string>
+
+    <string name="show_forward_to_settings_dialog">您需要在“设置”中手动授予必要的权限</string>
+    <string name="show_request_reason_dialog">程序运行需要文件读取权限</string>
+    <string name="show_request_reason_dialog_pos">@string/ok</string>
+    <string name="show_request_reason_dialog_neg">@string/cancel</string>
+
+    <!--Music Library Fragment-->
+    <string name="music_card_transition_name" translatable="false">music_card_%1$s</string>
+    <string name="music_card_detail_transition_name" translatable="false">music_card_detail</string>
+
+    <!-- MainActivity -->
+
+    <!-- Detail -->
+    <string name="detail_music_count">相关歌曲(%1$s)</string>
+
+    <!-- Service -->
+    <string name="text_button_play">播放</string>
+    <string name="text_button_pause">暂停</string>
+    <string name="text_button_search">搜索</string>
+    <string name="text_button_settings">设置</string>
+    <string name="text_button_previous">前一首</string>
+    <string name="text_button_next">后一首</string>
+    <string name="text_button_repeat_one">单曲循环</string>
+    <string name="text_button_repeat_all">列表循环</string>
+    <string name="text_button_shuffle_on">随机播放</string>
+    <string name="text_button_close">关闭</string>
+    <string name="text_button_cancel" translatable="false">@string/cancel</string>
+    <string name="text_button_confirm" translatable="false">@string/ok</string>
+
+    <!-- Playlist -->
+    <string name="playlist_title">播放列表(%1$s)</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">主页</string>
+    <string name="search_fragment_label">搜索</string>
+    <string name="settings_fragment_label">设置</string>
+    <string name="detail_fragment_label">详细</string>
+    <string name="style_fragment_label">风格</string>
+    <string name="playing_fragment_label">播放</string>
+
+    <!-- Preference -->
+    <string name="set_theme">主题</string>
+    <string name="set_theme_color_filter">颜色过滤</string>
+    <string name="key_set_theme_color_filter">key_set_theme_color_filter</string>
+    <string name="set_theme_dark_mode">黑暗模式</string>
+    <string name="set_theme_dark_mode_def" translatable="false">0</string>
+    <string name="key_set_theme_dark_mode" translatable="false">KEY_SET_THEME_DARK_MODE</string>
+    <string-array name="set_theme_dark_mode_value" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="set_theme_dark_mode_entries">
+        <item>跟随系统</item>
+        <item>浅色</item>
+        <item>深色</item>
+    </string-array>
+
+    <string name="set_sync">歌曲过滤</string>
+    <string name="set_sync_unknown">过滤未知歌手</string>
+    <string name="key_set_sync_unknown" translatable="false">KEY_SETTINGS_MEDIA_UNKNOWN_FILTER</string>
+
+    <string name="set_play">播放</string>
+    <string name="set_play_with_other">允许和其他程序一起播放</string>
+    <string name="set_play_with_other_summary_on">失去焦点时继续播放</string>
+    <string name="set_play_with_other_summary_off">失去焦点时暂停</string>
+    <string name="key_set_play_with_other" translatable="false">KEY_SETTINGS_IGNORE_AUDIO_FOCUS</string>
+
+    <string name="set_play_playback_parameters">播放速度</string>
+    <string name="key_set_play_playback_parameters" translatable="false">KEY_SETTINGS_PLAYBACK_PARAMETERS</string>
+    <string-array name="set_play_playback_parameters_value" translatable="false">
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1</item>
+        <item>1.25</item>
+        <item>1.5</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="set_play_playback_parameters_entries" translatable="false">
+        <item>X 0.5</item>
+        <item>X 0.75</item>
+        <item>X 1</item>
+        <item>X 1.25</item>
+        <item>X 1.5</item>
+        <item>X 2</item>
+        <item>X 3</item>
+    </string-array>
+    <string name="set_play_playback_parameters_def" translatable="false">1</string>
+    <string name="set_play_volume">音量</string>
+    <string name="key_set_play_volume" translatable="false">KEY_SETTINGS_VOLUME</string>
+    <string name="key_set_play_summary">调整应用内音量</string>
+    <integer name="set_play_volume_max">100</integer>
+    <integer name="set_play_volume_min">0</integer>
+    <integer name="set_play_volume_def">@integer/set_play_volume_max</integer>
+
+    <string name="set_list_filter_sort">排序</string>
+    <string name="set_list_filter_sort_def">添加时间</string>
+    <string-array name="set_list_filter_sort_entries">
+        <item>@string/set_list_filter_sort_def</item>
+        <item>标题</item>
+    </string-array>
+    <string-array name="set_list_filter_sort_value" translatable="false">
+        <item>add date</item>
+        <item>title</item>
+    </string-array>
+    <string name="key_set_list_filter_sort" translatable="false">key_set_list_filter_sort</string>
+    <string name="set_list_filter_grid">网格数量</string>
+    <string name="key_set_list_filter_grid" translatable="false">key_set_list_filter_grid</string>
+    <string name="set_list_filter_grid_def" translatable="false">1</string>
+    <string name="set_list_filter_grid_summary">专辑和艺术家网格数量+2</string>
+    <integer name="set_list_filter_grid_max">3</integer>
+    <integer name="set_list_filter_grid_min">1</integer>
+
+    <string name="set_audio_effect">音效</string>
+    <string name="key_set_audio_effect" translatable="false">key_set_audio_effect</string>
+    <string name="set_audio_effect_enable">启用均衡器</string>
+    <string name="set_audio_effect_reset">重置均衡器</string>
+    <string name="set_audio_effect_reset_message">重置后无法恢复，确定要重置？</string>
+    <string name="set_audio_effect_reset_ok">重置</string>
+    <string name="set_audio_effect_reset_cancel" translatable="false">@string/cancel</string>
+    <string name="set_audio_effect_seek_enable">锁定均衡器</string>
+    <string name="key_set_audio_effect_seek_enable" translatable="false">key_set_audio_effect_seek_enable</string>
+    <string name="key_set_audio_effect_enable" translatable="false">KEY_SETTINGS_AUDIO_EFFECT</string>
+    <string name="set_audio_effect_boost_enable">启用低音</string>
+    <string name="key_set_audio_effect_boost" translatable="false">KEY_SETTINGS_AUDIO_EFFECT_BOOST</string>
+    <string name="set_audio_effect_boost_value">低音强度</string>
+    <string name="key_set_audio_effect_boost_value" translatable="false">KEY_SETTINGS_AUDIO_EFFECT_BOOST_VALUE</string>
+    <integer name="set_audio_effect_boost_min">0</integer>
+    <integer name="set_audio_effect_boost_max">19</integer>
+    <string name="set_audio_effect_presets">预设</string>
+    <string name="key_set_audio_effect_presets" translatable="false">key_set_audio_effect_presets</string>
+
+</resources>

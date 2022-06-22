@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Shape-->
+    <style name="ShapeAppearance.Navigation" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Owl.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0px</item>
+    </style>
+    <style name="ShapeAppearance.Owl.MinimizedSheet" parent="ShapeAppearance.Owl.MediumComponent">
+        <item name="cornerSizeTopLeft">@dimen/minimized_sheet_top_left_radius</item>
+    </style>
+    <dimen name="minimized_sheet_top_left_radius">48dp</dimen>
+
+    <dimen name="small_component_corner_radius">24dp</dimen>
+
+</resources>

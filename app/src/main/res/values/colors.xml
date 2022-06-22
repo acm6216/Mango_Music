@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="google_blue_300">#8AB4F8</color>
+    <color name="google_grey_900">#202124</color>
+
+    <color name="color_primary_dark">@color/google_blue_300</color>
+
+    <color name="color_surface_light">@color/white</color>
+    <color name="color_surface_dark">@color/google_grey_900</color>
+    <color name="color_surface">@color/color_surface_light</color>
+
+    <color name="dark_30_percent">#4D000000</color>
+    <color name="dark_50_percent">#80000000</color>
+    <color name="dark_70_percent">#B3000000</color>
+
+    <color name="system_window_scrim_light">#99FFFFFF</color>
+    <color name="system_window_scrim_light_compat">@color/google_grey_900</color>
+    <color name="system_window_scrim_compat">@color/system_window_scrim_light_compat</color>
+    <color name="system_window_scrim">@color/system_window_scrim_light</color>
+
+    <color name="lrc_normal_text_color">#9E9E9E</color>
+    <color name="lrc_current_text_color">#FF4081</color>
+    <color name="lrc_timeline_text_color">#F8BBD0</color>
+    <color name="lrc_timeline_color">#809E9E9E</color>
+    <color name="lrc_time_text_color">#809E9E9E</color>
+</resources>

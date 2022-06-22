@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/avd_edit_to_reply.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/avd_reply_to_edit.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/bottom_app_bar_title_foreground.xml" value="0.1185" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/divider.xml" value="0.121" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_account.xml" value="0.159" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_album.xml" value="0.159" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_arrow_back.xml" value="0.157" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_arrow_up.xml" value="0.157" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_close.xml" value="0.159" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_delete.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_favorite.xml" value="0.159" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_grid_view.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_library_music.xml" value="0.159" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_mango.xml" value="0.157" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_music.xml" value="0.159" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_pause.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_play.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_playlist_add.xml" value="0.1775" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_queue.xml" value="0.1775" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_radio.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_repeat.xml" value="0.1775" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_reply_all.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_search.xml" value="0.157" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_settings.xml" value="0.157" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_skip_next.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_skip_previous.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/ic_stop.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/play_button_background.xml" value="0.121" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/seekbar_track.xml" value="0.1805" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/drawable/sheet_expand.xml" value="0.121" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/activity_main.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/bottom_sheet_effect_dialog_layout.xml" value="0.20833333333333334" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/content_main.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_album.xml" value="0.16394927536231885" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_artist.xml" value="0.16394927536231885" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_bottom_nav_drawer.xml" value="0.10729166666666666" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_detail.xml" value="0.16394927536231885" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_display.xml" value="0.11197916666666667" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_drawer.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_home.xml" value="0.10729166666666666" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_music_library.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_playing.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_playlist.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_search.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_settings.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_style.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/fragment_sync.xml" value="0.10989583333333333" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/item_album.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/item_artist.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/item_lyric.xml" value="0.2151268115942029" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/menu_bottom_sheet_dialog_layout.xml" value="0.16621376811594202" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/music_item_layout.xml" value="0.2" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/navigation_divider.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/navigation_header.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/navigation_item.xml" value="0.15896739130434784" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/row_music.xml" value="0.10989583333333333" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/text_switcher.xml" value="0.10989583333333333" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/view_pager_cover.xml" value="0.20833333333333334" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/layout/view_pager_lyric.xml" value="0.2913625304136253" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/menu/bottom_app_bar_detail_menu.xml" value="0.24947916666666667" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/menu/bottom_app_bar_home_menu.xml" value="0.24583333333333332" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/menu/bottom_app_bar_settings_menu.xml" value="0.24583333333333332" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/menu/bottom_sheet_fi.xml" value="0.24947916666666667" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/menu/menu_main.xml" value="0.24583333333333332" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/xml/audio_effect_preferences.xml" value="0.17798913043478262" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/xml/list_preference.xml" value="0.16621376811594202" />
+        <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/xml/root_preferences.xml" value="0.16621376811594202" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

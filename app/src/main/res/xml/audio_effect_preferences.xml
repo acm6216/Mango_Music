@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        app:initialExpandedChildrenCount="3"
+        app:key="@string/key_set_audio_effect"
+        app:title="@string/set_audio_effect">
+        <SwitchPreferenceCompat
+            app:key="@string/key_set_audio_effect_boost"
+            app:title="@string/set_audio_effect_boost_enable"/>
+        <SeekBarPreference
+            app:dependency="@string/key_set_audio_effect_boost"
+            app:defaultValue="@integer/set_audio_effect_boost_min"
+            app:min="@integer/set_audio_effect_boost_min"
+            android:max="@integer/set_audio_effect_boost_max"
+            app:showSeekBarValue="true"
+            app:title="@string/set_audio_effect_boost_value"
+            app:key="@string/key_set_audio_effect_boost_value"/>
+        <SwitchPreferenceCompat
+            app:key="@string/key_set_audio_effect_enable"
+            app:title="@string/set_audio_effect_enable"/>
+    </PreferenceCategory>
+</PreferenceScreen>

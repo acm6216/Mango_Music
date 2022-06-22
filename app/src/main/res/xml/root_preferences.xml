@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/set_theme">
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            app:key="@string/key_set_theme_dark_mode"
+            app:defaultValue="@string/set_theme_dark_mode_def"
+            app:entryValues="@array/set_theme_dark_mode_value"
+            app:entries="@array/set_theme_dark_mode_entries"
+            app:title="@string/set_theme_dark_mode"/>
+        <SwitchPreferenceCompat
+            app:title="@string/set_theme_color_filter"
+            app:key="@string/key_set_theme_color_filter"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/set_sync">
+        <SwitchPreferenceCompat
+            app:key="@string/key_set_sync_unknown"
+            app:title="@string/set_sync_unknown"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:allowDividerBelow="true"
+        app:title="@string/set_play">
+        <SwitchPreferenceCompat
+            app:summaryOn="@string/set_play_with_other_summary_on"
+            app:summaryOff="@string/set_play_with_other_summary_off"
+            app:key="@string/key_set_play_with_other"
+            app:title="@string/set_play_with_other"/>
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            app:entries="@array/set_play_playback_parameters_entries"
+            app:entryValues="@array/set_play_playback_parameters_value"
+            app:title="@string/set_play_playback_parameters"
+            app:defaultValue="@string/set_play_playback_parameters_def"
+            app:key="@string/key_set_play_playback_parameters"/>
+        <SeekBarPreference
+            app:summary="@string/key_set_play_summary"
+            app:showSeekBarValue="true"
+            app:defaultValue="@integer/set_play_volume_def"
+            app:min="@integer/set_play_volume_min"
+            android:max="@integer/set_play_volume_max"
+            app:title="@string/set_play_volume"
+            app:allowDividerBelow="true"
+            app:key="@string/key_set_play_volume"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="media"
+            type="androidx.media3.common.MediaItem" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <app.mango.music.views.EdgeTransparentView
+            app:edge_position="top|bottom"
+            app:edge_width="@dimen/min_touch_target_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <app.mango.music.views.lrcview.LrcViewKt
+                android:id="@+id/lrc_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:load_lyric="@{media}"
+                app:lrcCurrentTextColor="?colorPrimary"
+                app:lrcTimelineTextColor="?colorError" />
+        </app.mango.music.views.EdgeTransparentView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

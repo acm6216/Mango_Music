@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/music_library_fragment">
+
+    <fragment
+        android:id="@+id/music_library_fragment"
+        android:name="app.mango.music.ui.MusicLibraryFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_music_library">
+        <argument
+            android:name="musicBox"
+            app:argType="app.mango.music.audio.MusicBox"
+            android:defaultValue="MUSIC_LIBRARY"/>
+        <action
+            android:id="@+id/action_musicLibraryFragment_to_detailFragment"
+            app:destination="@id/detail_fragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@+id/music_library_fragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="app.mango.music.ui.SearchFragment"
+        android:label="@string/search_fragment_label"
+        tools:layout="@layout/fragment_search"/>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="app.mango.music.ui.settings.SettingsFragment"
+        android:label="@string/settings_fragment_label"
+        tools:layout="@layout/fragment_settings"/>
+
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:name="app.mango.music.ui.DetailFragment"
+        android:label="@string/detail_fragment_label"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="musicBox"
+            app:argType="app.mango.music.audio.MusicBox"
+            android:defaultValue="ALBUM"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/style_fragment"
+        android:name="app.mango.music.ui.style.StyleFragment"
+        android:label="@string/style_fragment_label"
+        tools:layout="@layout/fragment_style"/>
+
+    <fragment
+        android:id="@+id/playing_fragment"
+        android:name="app.mango.music.ui.PlayingFragment"
+        android:label="@string/playing_fragment_label"
+        tools:layout="@layout/fragment_playing"/>
+
+    <action
+        app:destination="@id/playing_fragment"
+        android:id="@+id/main_to_playing"/>
+
+</navigation>

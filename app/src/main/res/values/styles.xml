@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="SeekbarTheme"  parent="@style/Widget.AppCompat.SeekBar">
+        <item name="android:progressTint">?attr/colorPrimary</item>
+        <item name="android:secondaryProgressTint">#99ffffff</item>
+        <item name="android:thumbTint">?attr/colorPrimary</item>
+        <item name="android:progressDrawable">@drawable/seekbar_track</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+</resources>

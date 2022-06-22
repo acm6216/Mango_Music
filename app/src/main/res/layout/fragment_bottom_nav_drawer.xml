@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/background_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_halfExpandedRatio="0.6"
+            app:behavior_hideable="true"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:focusable="true"
+                app:marginTopSystemWindowInsets="@{true}"
+                android:id="@+id/foreground_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:translationZ="@dimen/bottom_app_bar_logo_size"
+                app:cardCornerRadius="@dimen/bottom_app_bar_logo_size">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        app:navigationIcon="@drawable/ic_close"
+                        app:subtitle="version - mango 1.2"
+                        app:title="@string/app_name" />
+
+                    <app.mango.music.ui.nav.view.NavigationView
+                        android:id="@+id/nav"
+                        android:overScrollMode="never"
+                        android:clipToPadding="true"
+                        android:paddingBottom="@dimen/navigation_drawer_nav_bottom_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

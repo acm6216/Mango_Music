@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <DropDownPreference
+        app:defaultValue="@string/set_list_filter_sort_def"
+        app:useSimpleSummaryProvider="true"
+        app:entries="@array/set_list_filter_sort_entries"
+        app:entryValues="@array/set_list_filter_sort_value"
+        android:title="@string/set_list_filter_sort"
+        app:key="@string/key_set_list_filter_sort"/>
+    <SeekBarPreference
+        app:summary="@string/set_list_filter_grid_summary"
+        app:showSeekBarValue="true"
+        app:defaultValue="@string/set_list_filter_grid_def"
+        app:min="@integer/set_list_filter_grid_min"
+        android:max="@integer/set_list_filter_grid_max"
+        app:key="@string/key_set_list_filter_grid"
+        app:title="@string/set_list_filter_grid"/>
+</PreferenceScreen>

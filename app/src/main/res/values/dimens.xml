@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="min_touch_target_size">48dp</dimen>
+
+    <!--BottomAppBar-->
+    <dimen name="bottom_app_bar_height">56dp</dimen>
+    <dimen name="bottom_app_bar_fab_cradle_corner_radius">32dp</dimen>
+    <dimen name="bottom_app_bar_fab_cradle_margin">8dp</dimen>
+    <dimen name="bottom_app_bar_logo_size">24dp</dimen>
+
+    <dimen name="navigation_drawer_profile_image_size_padded">32dp</dimen>
+    <dimen name="navigation_drawer_nav_bottom_margin">62dp</dimen>
+
+    <!--Music previews-->
+    <dimen name="music_profile_image_size">42dp</dimen>
+    <dimen name="music_card_popup_elevation">6dp</dimen>
+    <dimen name="music_card_popup_elevation_compat">3dp</dimen>
+
+    <dimen name="pause_bar_width" tools:ignore="MissingDefaultResource">5dp</dimen>
+    <dimen name="pause_bar_distance" tools:ignore="MissingDefaultResource">4dp</dimen>
+    <dimen name="pause_bar_height" tools:ignore="MissingDefaultResource">14dp</dimen>
+
+    <dimen name="lrc_text_size">16sp</dimen>
+    <dimen name="lrc_time_text_size">12sp</dimen>
+    <dimen name="lrc_divider_height">16dp</dimen>
+    <dimen name="lrc_timeline_height">1dp</dimen>
+    <dimen name="lrc_drawable_width">30dp</dimen>
+    <dimen name="lrc_time_width">40dp</dimen>
+
+</resources>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="media"
+            type="androidx.media3.common.MediaItem" />
+        <variable
+            name="listener"
+            type="app.mango.music.ui.BaseFragment.ControlListener" />
+        <variable
+            name="duration"
+            type="app.mango.music.audio.PlayDuration" />
+        <variable
+            name="position"
+            type="app.mango.music.audio.PlayPosition" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:paddingBottomSystemWindowInsets="@{true}"
+        tools:context=".MainActivity">
+
+        <fragment
+            android:tag="app.mango.music.ui.DisplayFragment"
+            android:name="app.mango.music.ui.DisplayFragment"
+            app:layout_constraintEnd_toEndOf="@id/layoutPlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layoutPlayer"
+            app:layout_constraintTop_toBottomOf="@id/buttonShare"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <View
+            android:id="@+id/viewSupporterForAlbumArt"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toTopOf="@id/layoutPlayer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/viewSupporterForAlbumArt"
+            app:layout_constraintEnd_toStartOf="@id/viewSupporterForAlbumArt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            tools:listitem="@layout/row_music"
+            app:layout_constraintBottom_toBottomOf="@+id/viewSupporterForAlbumArt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewSupporterForAlbumArt" />
+
+        <ImageView
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/buttonKeyDown"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/buttonShare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="TODO" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <app.mango.music.views.PlayButton
+                android:id="@+id/button_play"
+                android:onClick="@{(view)->listener.togglePlay()}"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/buttonVolume"
+                android:contentDescription="TODO" />
+
+            <ImageButton
+                android:background="@drawable/play_button_background"
+                android:id="@+id/buttonPrevious"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:padding="4dp"
+                android:onClick="@{(view)->listener.previous()}"
+                android:src="@drawable/ic_skip_previous"
+                app:layout_constraintEnd_toStartOf="@id/button_play"
+                app:layout_constraintBottom_toBottomOf="@id/button_play"
+                app:layout_constraintTop_toTopOf="@id/button_play"
+                android:contentDescription="TODO" />
+
+            <ImageButton
+                android:background="@drawable/play_button_background"
+                android:id="@+id/buttonNext"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:padding="4dp"
+                android:onClick="@{(view)->listener.next()}"
+                android:src="@drawable/ic_skip_next"
+                app:layout_constraintStart_toEndOf="@id/button_play"
+                app:layout_constraintBottom_toBottomOf="@id/button_play"
+                app:layout_constraintTop_toTopOf="@id/button_play"
+                android:contentDescription="TODO" />
+
+            <app.mango.music.views.IconStateButton
+                android:id="@+id/buttonShuffle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:padding="4dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_shuffle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/button_play"
+                app:layout_constraintTop_toTopOf="@id/button_play" />
+
+            <app.mango.music.views.IconStateButton
+                android:id="@+id/buttonRepeat"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="30dp"
+                android:padding="4dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_repeat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/button_play"
+                app:layout_constraintTop_toTopOf="@id/button_play" />
+
+            <app.mango.music.views.MusicSeekBar
+                android:progress="@{position.value}"
+                android:max="@{duration.value}"
+                android:id="@+id/playerSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="25dp"
+                android:theme="@style/SeekbarTheme"
+                app:layout_constraintEnd_toStartOf="@id/textTotalTime"
+                app:layout_constraintStart_toEndOf="@id/textCurrentTime"
+                app:layout_constraintBottom_toTopOf="@+id/button_play" />
+
+            <TextView
+                android:id="@+id/textCurrentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:padding="4dp"
+                app:music_duration="@{position}"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/playerSeekbar"
+                app:layout_constraintTop_toTopOf="@id/playerSeekbar" />
+
+            <TextView
+                android:id="@+id/textTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"
+                app:music_duration="@{duration}"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/playerSeekbar"
+                app:layout_constraintTop_toTopOf="@id/playerSeekbar"/>
+
+            <TextView
+                android:id="@+id/textMusicTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{media.mediaMetadata.title}"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/playerSeekbar" />
+
+            <TextView
+                android:id="@+id/textMusicArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{media.mediaMetadata.artist}"
+                android:textColor="?attr/colorPrimaryVariant"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/textMusicTitle" />
+
+            <app.mango.music.views.IconStateButton
+                android:id="@+id/buttonFavorite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_favorite"
+                android:background="?selectableItemBackgroundBorderless"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/textMusicTitle"
+                app:layout_constraintTop_toTopOf="@id/textMusicTitle"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/buttonRadio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_radio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/textMusicTitle"
+                app:layout_constraintTop_toTopOf="@id/textMusicTitle"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/buttonVolume"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_graphic_eq"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="?selectableItemBackgroundBorderless"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/button_queue"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="4dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_playlist_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/buttonVolume"
+                app:layout_constraintTop_toTopOf="@id/buttonVolume"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <fragment
+            android:id="@+id/play_list"
+            android:tag="app.mango.music.ui.playlist.PlaylistSheetFragment"
+            android:name="app.mango.music.ui.PlaylistSheetFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

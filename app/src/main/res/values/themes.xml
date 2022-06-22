@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<style name="Base.Theme.Mango" parent="Theme.Material3.DayNight.NoActionBar">-->
+
+    <style name="Platform.V21.Theme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryDark">@color/system_window_scrim_compat</item>
+    </style>
+    <style name="Platform.Theme" parent="Platform.V21.Theme" />
+    <style name="Base.Theme" parent="Platform.Theme">
+        <item name="android:colorBackground">?colorSurface</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimaryVariant">?colorPrimary</item>
+        <item name="colorSecondary">?colorPrimary</item>
+        <item name="colorOnSecondary">?colorOnPrimary</item>
+        <item name="colorSecondaryVariant">?colorSecondary</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="minTouchTargetSize">0dp</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
+        <item name="colorAppBarSurface">?colorSurface</item>
+        <item name="scrimBackground">#99eef0f2</item>
+    </style>
+
+    <style name="Theme" parent="Base.Theme" >
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Purple">
+        <item name="colorPrimary">#C9A8D4</item>
+    </style>
+
+    <style name="Platform.V21.Theme.Immersive" parent="Theme.MaterialComponents">
+        <item name="android:navigationBarColor">?colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/dark_50_percent</item>
+    </style>
+    <style name="Platform.Theme.Immersive" parent="Platform.V21.Theme.Immersive" />
+    <style name="Base.Theme.Immersive" parent="Platform.Theme.Immersive">
+
+        <item name="android:colorBackground">?colorSurface</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/color_primary_dark</item>
+        <item name="colorPrimaryVariant">?colorPrimary</item>
+        <item name="colorSecondary">?colorPrimary</item>
+        <item name="colorOnSecondary">?colorOnPrimary</item>
+        <item name="colorSecondaryVariant">?colorSecondary</item>
+        <item name="colorSurface">@color/color_surface_dark</item>
+        <item name="minTouchTargetSize">0dp</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
+        <item name="colorAppBarSurface">@color/dark_50_percent</item>
+    </style>
+    <style name="Theme.Immersive" parent="Base.Theme.Immersive" />
+</resources>

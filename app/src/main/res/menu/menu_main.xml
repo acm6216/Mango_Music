@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="app.mango.music.ui.main.MainActivity">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/to_music_library"
+            android:checked="true"
+            android:icon="@drawable/ic_library_music"
+            android:title="@string/navigation_music" />
+        <item
+            android:id="@+id/to_favorite"
+            android:checked="true"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/navigation_favorite" />
+        <item
+            android:id="@+id/to_album"
+            android:checked="true"
+            android:icon="@drawable/ic_album"
+            android:title="@string/navigation_album" />
+        <item
+            android:id="@+id/to_artist"
+            android:checked="true"
+            android:icon="@drawable/ic_account"
+            android:title="@string/navigation_artist" />
+    </group>
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/to_style"
+            android:checked="true"
+            android:icon="@drawable/ic_style"
+            android:title="@string/navigation_style" />
+        <!--<item
+            android:id="@+id/to_sync"
+            android:checked="true"
+            android:icon="@drawable/ic_sync"
+            android:title="@string/navigation_sync" />-->
+    </group>
+</menu>
