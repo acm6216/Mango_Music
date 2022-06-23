@@ -70,6 +70,9 @@
         <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/xml/audio_effect_preferences.xml" value="0.17798913043478262" />
         <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/xml/list_preference.xml" value="0.16621376811594202" />
         <entry key="..\:/Android Project/MangoLayerCake2/app/src/main/res/xml/root_preferences.xml" value="0.16621376811594202" />
+        <entry key="..\:/MangoLayerCake2/app/src/main/res/drawable/icon.xml" value="0.121" />
+        <entry key="..\:/MangoLayerCake2/app/src/main/res/layout/bottom_sheet_effect_dialog_layout.xml" value="0.10989583333333333" />
+        <entry key="..\:/MangoLayerCake2/app/src/main/res/layout/fragment_settings.xml" value="0.10989583333333333" />
         <entry key="..\:/MangoLayerCake2/app/src/main/res/xml/about_preferences.xml" value="0.10885416666666667" />
       </map>
     </option>

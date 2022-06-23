@@ -1,17 +1,15 @@
-package app.mango.music.ui
+package app.mango.music.ui.about
 
 import android.annotation.SuppressLint
-import android.graphics.Paint
 import android.os.Bundle
 import android.view.View
 import app.mango.music.R
 import app.mango.music.databinding.FragmentAboutBinding
+import app.mango.music.ui.BaseFragment
 import app.mango.music.utils.DimensionExtensions.dpToPx
-import app.mango.music.utils.themeColor
-import com.google.android.material.shape.*
 import com.google.android.material.transition.MaterialFade
 
-class AboutFragment:BaseFragment<FragmentAboutBinding>() {
+class AboutFragment: BaseFragment<FragmentAboutBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +30,8 @@ class AboutFragment:BaseFragment<FragmentAboutBinding>() {
         binding.toolbar.setNavigationOnClickListener { navController.navigateUp() }
 
         //气泡 带 阴影
-        val shapePathModel = ShapeAppearanceModel.builder()
+
+        /*val shapePathModel = ShapeAppearanceModel.builder()
             .setAllCorners(RoundedCornerTreatment())
             .setAllCornerSizes(16.dp())
             .setRightEdge(object :TriangleEdgeTreatment(8.dp(),false){
@@ -45,6 +44,7 @@ class AboutFragment:BaseFragment<FragmentAboutBinding>() {
                     super.getEdgePath(length, 12.dp(), interpolation, shapePath)
                 }
             }).build()
+            <!--android:clipChildren="false"-->
         val backgroundDrawable = MaterialShapeDrawable(shapePathModel).apply {
             setTint(requireContext().themeColor(R.attr.colorSecondary))
             paintStyle = Paint.Style.FILL
@@ -56,7 +56,7 @@ class AboutFragment:BaseFragment<FragmentAboutBinding>() {
             shadowVerticalOffset = 2.dp().toInt()
 
         }
-        binding.test.background = backgroundDrawable
+        binding.test.background = backgroundDrawable*/
 
         /*val shapePathModel = ShapeAppearanceModel.builder()
             .setAllCorners(RoundedCornerTreatment())

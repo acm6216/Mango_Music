@@ -62,7 +62,7 @@
     <string name="search_fragment_label">搜索</string>
     <string name="settings_fragment_label">设置</string>
     <string name="detail_fragment_label">详细</string>
-    <string name="style_fragment_label">风格</string>
+    <string name="about_fragment_label">关于</string>
     <string name="playing_fragment_label">播放</string>
 
     <!-- Preference -->
@@ -158,4 +158,17 @@
     <string name="set_audio_effect_presets">预设</string>
     <string name="key_set_audio_effect_presets" translatable="false">key_set_audio_effect_presets</string>
 
+    <!-- About -->
+    <string name="about_version">版本</string>
+    <string name="key_about_version">key_about_version</string>
+    <string name="about_github">在Github上查看</string>
+    <string name="key_about_github">key_about_github</string>
+    <string name="about_github_detail">https://github.com/acm6216/Mango_Music</string>
+    <string name="about_developer">开发者</string>
+    <string name="about_developer_name">岑小缘</string>
+    <string name="about_developer_email">邮箱</string>
+    <string name="about_developer_email_detail">2103813720@qq.com</string>
+    <string name="about_developer_github">在Github上关注</string>
+    <string name="key_about_developer_github">key_about_developer_github</string>
+    <string name="about_developer_github_detail">https://github.com/acm6216/</string>
 </resources>

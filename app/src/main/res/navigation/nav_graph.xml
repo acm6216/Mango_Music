@@ -54,8 +54,8 @@
 
     <fragment
         android:id="@+id/about_fragment"
-        android:name="app.mango.music.ui.AboutFragment"
-        android:label="@string/style_fragment_label"
+        android:name="app.mango.music.ui.about.AboutFragment"
+        android:label="@string/about_fragment_label"
         tools:layout="@layout/fragment_about"/>
 
     <fragment

@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:icon="@drawable/ic_music"
+        app:title="@string/app_name" />
+
+    <Preference
+        app:icon="@drawable/ic_info"
+        app:key="@string/key_about_version"
+        app:title="@string/about_version" />
+    <Preference
+        app:icon="@drawable/ic_public"
+        app:key="@string/key_about_github"
+        app:summary="@string/about_github_detail"
+        app:title="@string/about_github" />
+
+    <PreferenceCategory app:title="@string/about_developer">
+
+        <Preference
+            app:icon="@drawable/ic_person"
+            app:title="@string/about_developer_name" />
+
+        <Preference
+            app:icon="@drawable/ic_email"
+            app:summary="@string/about_developer_email_detail"
+            app:title="@string/about_developer_email" />
+        <Preference
+            app:icon="@drawable/ic_public"
+            app:key="@string/key_about_developer_github"
+            app:summary="@string/about_developer_github_detail"
+            app:title="@string/about_developer_github" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

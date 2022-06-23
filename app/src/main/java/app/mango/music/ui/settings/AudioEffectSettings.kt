@@ -117,9 +117,11 @@ class AudioEffectSettings:BasePreferenceFragment() {
                 setSeekBarEnable(newValue!=true)
                 true
             }
-            setSeekBarEnable(
-                !preferenceCategory.sharedPreferences.getBoolean(key,false)
-            )
+            preferenceCategory.sharedPreferences?.let {
+                setSeekBarEnable(
+                    !it.getBoolean(key, false)
+                )
+            }
             isIconSpaceReserved = false
         })
     }
@@ -132,7 +134,7 @@ class AudioEffectSettings:BasePreferenceFragment() {
                 seekbars.forEach {
                     it.seekBarPreference.apply {
                         value = max / 2
-                        onPreferenceChangeListener.onPreferenceChange(this, max / 2)
+                        onPreferenceChangeListener?.onPreferenceChange(this, max / 2)
                     }
                 }
             }
@@ -195,7 +197,7 @@ class AudioEffectSettings:BasePreferenceFragment() {
         val level = equalizer.getBandLevel(bandLevel.index).toInt()
         bandLevel.seekBarPreference.apply {
             value = level + bandLevel.maxBandLevel
-            if(!isAuto) onPreferenceChangeListener.onPreferenceChange(this,value)
+            if(!isAuto) onPreferenceChangeListener?.onPreferenceChange(this,value)
         }
     }
 
