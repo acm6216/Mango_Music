@@ -28,7 +28,7 @@
         <item
             android:id="@+id/to_about"
             android:checked="true"
-            android:icon="@drawable/ic_style"
+            android:icon="@drawable/ic_info"
             android:title="@string/navigation_about" />
     </group>
 </menu>
