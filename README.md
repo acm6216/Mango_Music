@@ -1,7 +1,9 @@
 # Mango_Music
 一个简洁的Android音乐播放器，通过Kotlin编写。
-
-协程、room、coil、media3、jaudiotagger、dagger、hilt、lifecycle
+JetPack:Room,Media3,Lifecycle,ViewModel,DataBinding
+Google:Dagger,Hilt,Material
+Kotlin:协程
+其他:coil、jaudiotagger
 
 ui参考Reply，Service参考LMusic(gitee)
 
