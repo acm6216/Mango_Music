@@ -151,7 +151,7 @@ class IndicatorView  @JvmOverloads constructor(
         //设置view宽高 不设置就是默认全屏view，没办法改变位置
         if (pointViews.isNotEmpty()) {
             val width = pointViews[pointViews.size - 1].x + radius
-            val height = radius * 2
+            val height = radius * 4
             setMeasuredDimension(width, height)
         } else {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec)

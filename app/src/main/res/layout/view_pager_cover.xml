@@ -15,7 +15,7 @@
         android:padding="@dimen/fab_margin">
 
         <androidx.cardview.widget.CardView
-            app:cardCornerRadius="@dimen/fab_margin"
+            app:cardCornerRadius="@dimen/card_radius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

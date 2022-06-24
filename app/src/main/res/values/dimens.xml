@@ -1,5 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
 
     <dimen name="min_touch_target_size">48dp</dimen>
 

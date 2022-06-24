@@ -7,11 +7,11 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            app:cardElevation="@dimen/fab_margin"
+            app:cardElevation="@dimen/card_elevation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/fab_margin"
-            app:cardCornerRadius="@dimen/fab_margin">
+            android:layout_margin="@dimen/card_radius"
+            app:cardCornerRadius="@dimen/card_radius">
 
             <fragment
                 android:name="app.mango.music.ui.settings.AudioEffectSettings"
