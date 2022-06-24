@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.databinding.ViewDataBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 abstract class BaseBottomSheetDialog<T:ViewDataBinding>: BottomSheetDialogFragment() {
@@ -32,7 +33,12 @@ abstract class BaseBottomSheetDialog<T:ViewDataBinding>: BottomSheetDialogFragme
             val bottomSheet = this::class.java.getDeclaredField("bottomSheet").apply {
                 isAccessible = true
             }.get(this) as FrameLayout
+            val behavior = this::class.java.getDeclaredField("behavior").apply {
+                isAccessible = true
+            }.get(this) as BottomSheetBehavior<FrameLayout>
+            behavior.skipCollapsed = true
             setOnShowListener {
+                behavior.state = BottomSheetBehavior.STATE_EXPANDED
                 bottomSheet.background = ColorDrawable(Color.TRANSPARENT)
                 WindowInsetsControllerCompat(window!!,window!!.decorView).isAppearanceLightStatusBars = !isNight()
             }
