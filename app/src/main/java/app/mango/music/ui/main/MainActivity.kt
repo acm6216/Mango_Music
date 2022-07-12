@@ -103,6 +103,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Toolbar.OnMenuItemClic
         repeatWithViewLifecycle {
             launch {
                 GlobalData.currentIsPlaying.collect {
+                    binding.fab.isPlaying(it)
                 }
             }
             launch {
