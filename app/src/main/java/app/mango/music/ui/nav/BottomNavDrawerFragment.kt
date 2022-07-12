@@ -30,6 +30,12 @@ class BottomNavDrawerFragment : BaseFragment<FragmentBottomNavDrawerBinding>() {
         }
     }
 
+    private fun getVersionName():String{
+        val pm = requireContext().packageManager
+        val pi = pm?.getPackageInfo(requireContext().packageName, 0)
+        return pi?.versionName?:"1.0"
+    }
+
     private val closeDrawerOnBackPressed = object : OnBackPressedCallback(false) {
         override fun handleOnBackPressed() {
             close()
@@ -47,6 +53,7 @@ class BottomNavDrawerFragment : BaseFragment<FragmentBottomNavDrawerBinding>() {
 
         binding.run {
             toolbar.setNavigationOnClickListener { close() }
+            toolbar.subtitle = "version - mango ${getVersionName()}"
             nav.setOnItemClickListener(navigationListeners)
             root.setOnTouchListener { _, motionEvent ->
                 when(motionEvent.action){
@@ -60,26 +67,6 @@ class BottomNavDrawerFragment : BaseFragment<FragmentBottomNavDrawerBinding>() {
                 }
             }
             bottomSheetCallback.apply {
-                /*addOnSlideAction(ForegroundSheetTransformSlideAction(
-                binding.foregroundContainer,
-                backgroundShapeDrawable,
-                binding.profileImageView
-            ))*/
-                // Scrim view transforms
-                /*addOnSlideAction(AlphaSlideAction(scrimView))
-            addOnStateChangedAction(VisibilityStateAction(scrimView))
-            // Foreground transforms
-
-            // Recycler transforms
-            addOnStateChangedAction(ScrollToTopStateAction(navRecyclerView))
-            // Close the sandwiching account picker if open
-            addOnStateChangedAction(object : OnStateChangedAction {
-                override fun onStateChanged(sheet: View, newState: Int) {
-                    sandwichAnim?.cancel()
-                    sandwichProgress = 0F
-                }
-            })*/
-                // If the drawer is open, pressing the system back button should close the drawer.
                 addOnStateChangedAction(object : OnStateChangedAction {
                     override fun onStateChanged(sheet: View, newState: Int) {
                         closeDrawerOnBackPressed.isEnabled =
@@ -114,7 +101,7 @@ class BottomNavDrawerFragment : BaseFragment<FragmentBottomNavDrawerBinding>() {
         bottomSheetCallback.addOnStateChangedAction(action)
     }
 
-    fun addNavigationListener(unit:((Int,Int,Int)->Unit)) {
+    fun setNavigationListener(unit:((Int, Int, Int)->Unit)) {
         navEvent = unit
     }
 

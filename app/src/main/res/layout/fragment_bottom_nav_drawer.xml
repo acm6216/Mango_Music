@@ -35,7 +35,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="?actionBarSize"
                         app:navigationIcon="@drawable/ic_close"
-                        app:subtitle="version - mango 1.2"
                         app:title="@string/app_name" />
 
                     <app.mango.music.ui.nav.view.NavigationView

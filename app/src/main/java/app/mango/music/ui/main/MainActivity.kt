@@ -134,7 +134,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Toolbar.OnMenuItemClic
             )
         })
 
-        addNavigationListener { id, titleId, _ ->
+        setNavigationListener { id, titleId, _ ->
             binding.bottomAppBarTitle.setText(titleId)
             when (id) {
                 R.id.to_about -> navigateToStyle()
