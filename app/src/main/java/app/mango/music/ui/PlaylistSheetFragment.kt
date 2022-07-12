@@ -84,6 +84,7 @@ class PlaylistSheetFragment : BaseFragment<FragmentPlaylistBinding>() {
             playlist.apply {
                 itemTouchHelper()
                 scrollVisibility(binding.playlistTitleDivider)
+                ThemedFastScroller.create(this)
                 SpManager.listen(getString(R.string.key_set_list_filter_grid),
                     SpManager.SpIntListener(getString(R.string.set_list_filter_grid_def).toInt()) {
                         layoutManager = GridLayoutManager(context, it)

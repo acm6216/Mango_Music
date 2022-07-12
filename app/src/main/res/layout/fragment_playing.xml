@@ -282,13 +282,13 @@
                 tools:ignore="ContentDescription" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+<!--
         <fragment
             android:id="@+id/play_list"
             android:tag="app.mango.music.ui.playlist.PlaylistSheetFragment"
             android:name="app.mango.music.ui.PlaylistSheetFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

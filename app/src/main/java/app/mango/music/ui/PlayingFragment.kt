@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 class PlayingFragment : BaseFragment<FragmentPlayingBinding>(), BaseFragment.ControlListener {
 
     private val bottomPlaylist: PlaylistSheetFragment by lazy(LazyThreadSafetyMode.NONE) {
-        childFragmentManager.findFragmentById(R.id.play_list) as PlaylistSheetFragment
+        requireActivity().supportFragmentManager.findFragmentById(R.id.play_list) as PlaylistSheetFragment
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
