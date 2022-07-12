@@ -103,7 +103,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Toolbar.OnMenuItemClic
         repeatWithViewLifecycle {
             launch {
                 GlobalData.currentIsPlaying.collect {
-                    binding.fab.setInfinite(it)
+                }
+            }
+            launch {
+                GlobalData.currentMediaItem.collect {
+                    binding.fab.setCover(it)
                 }
             }
         }

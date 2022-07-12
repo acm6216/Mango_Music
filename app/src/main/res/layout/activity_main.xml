@@ -68,8 +68,10 @@
 
         <app.mango.music.views.PlayStateButton
             android:id="@+id/fab"
+            android:scaleType="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:maxImageSize="?actionBarSize"
             app:layout_anchor="@id/bottom_app_bar" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
